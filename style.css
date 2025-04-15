@@ -1,42 +1,125 @@
+# Generate a custom CSS style file for the ocean-themed portfolio layout
+css_code = """
+/* Global Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark {
+  background-color: #111827;
+  color: #e5e7eb;
 }
 
-header {
-  background-color: #007acc;
+/* Header */
+header.hero {
+  background: linear-gradient(to right, #007cf0, #00dfd8);
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+}
+.theme-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body.dark .theme-toggle {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
 }
 
-#resume {
+/* Section Headings */
+section h2 {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
+/* Project and Blog Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 0 20px 40px;
+}
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+body.dark .card {
+  background-color: #1e293b;
+  color: #e5e7eb;
+}
+
+/* Resume Section */
 .resume-button {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background-color: #007acc;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #007cf0;
   color: white;
-  font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 6px;
 }
-
 .resume-button:hover {
   background-color: #005fa3;
 }
 
+/* Contact Form */
+#contact form {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+#contact input, #contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#contact button:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 30px 10px;
-  background-color: #eee;
-  font-style: italic;
+  padding: 30px;
+  background-color: #f0f0f0;
+  color: #333;
 }
+body.dark footer {
+  background-color: #0f172a;
+  color: #9ca3af;
+}
+"""
+
+# Save CSS to file
+css_path = "/mnt/data/style_ocean_theme.css"
+with open(css_path, "w") as f:
+    f.write(css_code)
+
+css_path
