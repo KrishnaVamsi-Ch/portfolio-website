@@ -3,25 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Krishna Vamsi Portfolio</title>
+  <title>Krishna Vamsi | Portfolio of a Creative Coder</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </head>
 <body>
-
-  <header>
-    <h1>👋 Hi, I'm Krishna Vamsi Chelluboina</h1>
-    <p>Python Developer | Problem Solver | Real-World Builder</p>
+  <header class="hero">
+    <h1>🌊 Welcome to My Ocean of Code</h1>
+    <p>I'm <strong>Krishna Vamsi Chelluboina</strong> — a creative Python developer navigating the waves of logic, automation, and AI.</p>
+    <button onclick="toggleTheme()" class="theme-toggle">🌓 Toggle Theme</button>
   </header>
+
+  <section id="projects" class="projects-section">
+    <h2>🚀 Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🌍 Codebase Storyteller</h3>
+        <p>Visualizes Python code into human-language summaries in 100+ languages. A bridge between code and cognition.</p>
+        <a href="https://github.com/KrishnaVamsi-Ch/codebase-storyteller" target="_blank">🔗 GitHub</a>
+      </div>
+      <div class="card">
+        <h3>🧠 AI Resume Analyzer</h3>
+        <p>Reads your resume and job descriptions, highlights skill gaps with NLP-powered insights.</p>
+        <a href="https://github.com/KrishnaVamsi-Ch/ai-resume-analyzer" target="_blank">🔗 GitHub</a>
+      </div>
+      <div class="card">
+        <h3>📋 To-Do CLI App</h3>
+        <p>Command-line productivity tracker using JSON. Because clarity begins with lists.</p>
+        <a href="https://github.com/KrishnaVamsi-Ch/todo-list-cli" target="_blank">🔗 GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>📝 Blog & Reflections</h2>
+    <div class="grid">
+      <div class="card">
+        <h4>💡 How I Built My Portfolio</h4>
+        <p>A step-by-step breakdown of how I designed and launched this visual, coded space.</p>
+      </div>
+      <div class="card">
+        <h4>📦 Inside Codebase Storyteller</h4>
+        <p>Translating logic into language: an NLP-powered deep dive into code literacy.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="resume">
     <h2>📄 Resume</h2>
-    <p>Click below to download my latest resume and portfolio.</p>
-    <a href="Krishna_Vamsi_Portfolio_2025.docx" download class="resume-button">📥 Download Portfolio/Resume</a>
+    <p>Download my resume and explore my career trajectory as a problem solver, builder, and innovator.</p>
+    <a href="Krishna_Vamsi_Portfolio_2025.docx" download class="resume-button">📥 Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>📫 Let’s Connect</h2>
+    <form action="https://formspree.io/f/mzblyprj" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Prefer social? Find me here:</p>
+    <p>Email: <a href="mailto:krishnavamsichellu@gmail.com">krishnavamsichellu@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/krishna-chelluboina" target="_blank">@krishna-chelluboina</a></p>
+    <p>GitHub: <a href="https://github.com/KrishnaVamsi-Ch" target="_blank">@KrishnaVamsi-Ch</a></p>
   </section>
 
   <footer>
-    <p>🧠 “Code is not just what a computer understands — it's what humans understand too.”</p>
+    <p>🌌 “I write code the way artists paint — layer by layer, with light, structure, and soul.”</p>
   </footer>
-
 </body>
 </html>
